@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #373737;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+
+header {
+  background-color: #49a6e9;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#header_wrap {
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+h1, h2 {
+  margin: 5px 0;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #FFD700;
+    transition: left 0.5s;
+    z-index: 1000;
+    padding-top: 60px;
+}
+
+.menu:hover {
+    left: 0;
+}
+
+.menu a {
+    color: #ffffff;
+    background-color: #007bff;
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #0056b3;
+}
+
+
+.menu::before {
+    content: '☰';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    background-color: #FFD700;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.menu.is-active {
+    left: 0;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    cursor: pointer;
+}
+
+main {
+  margin-top: 160px;
+}
+
+#main_content_wrap .inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f4f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+#context1, #context2, #context3 {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+
+.carousel {
+    overflow: hidden;
+    width: 60%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    width: 100%;
+    flex: 0 0 auto;
+    margin: 0 auto;
+}
+
+.carousel-item img {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    border: 0;
+}
+
+
+footer {
+  background-color: #49a6e9;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #FFEB3B;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    top: 80px;
+  }
+
+  .menu a {
+    margin: 5px 0;
+  }
+
+  main {
+    margin-top: 200px;
+  }
+}
+
+.aspect-ratio-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.aspect-ratio-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
